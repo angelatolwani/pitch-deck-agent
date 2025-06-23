@@ -4,7 +4,7 @@ An AI-powered application that helps founders create compelling pitch decks usin
 
 ## 🎯 Demo
 
-**[Demo Video Coming Soon]** - I'll add a demo video showing the application in action.
+[Watch the Demo Video!](https://www.loom.com/share/51c0b7aced95420eb6683040fbf5f3ac?sid=417a0a23-7bfb-4b6d-9baf-babc156e84bd)
 
 ## ✨ Features
 
