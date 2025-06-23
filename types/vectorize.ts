@@ -12,14 +12,6 @@ export interface VectorizeDocument {
   total_chunks: string;
   unique_source: string;
   relevancy: number;
-  // Camel case duplicates
-  chunkId: string;
-  totalChunks: string;
-  originId: string;
-  uniqueSource: string;
-  sourceDisplayName: string;
-  pipelineId: string;
-  orgId: string;
 }
 
 export interface VectorizeResponse {
@@ -27,4 +19,4 @@ export interface VectorizeResponse {
   documents: VectorizeDocument[];
   averageRelevancy: number;
   ndcg: number;
-}
+} 

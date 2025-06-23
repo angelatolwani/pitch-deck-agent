@@ -1,94 +1,68 @@
 # Startup Pitch Deck Assistant
 
-A Next.js TypeScript application that helps founders create compelling pitch decks based on proven startup fundraising principles.
+An AI-powered application that helps founders create compelling pitch decks using OpenAI's Agents SDK and proven startup principles.
 
-## Features
+## 🎯 Demo
+
+**[Demo Video Coming Soon]** - I'll add a demo video showing the application in action.
+
+## ✨ Features
 
 - **AI-Powered Startup Advisor**: Interactive chat interface using OpenAI's Agents SDK
-- **Startup-Guided Pitch Deck Generation**: Create structured 11-slide pitch decks following industry-recommended format
-- **RAG-Powered Insights**: Leverages proven startup fundraising guides for contextual advice
 - **Comprehensive Analysis**: Get feedback on problem, solution, market, team, and more
+- **Structured Pitch Deck Generation**: Create professional 11-slide pitch decks
 - **Refinement Suggestions**: Identify areas needing improvement with specific guidance
+- **Modern UI**: Clean, responsive interface built with Next.js and Tailwind CSS
 
-## Tech Stack
+## 🚀 Quick Start
 
-- **Framework**: Next.js 14 with TypeScript
-- **AI**: OpenAI Agents SDK with GPT-4
-- **Styling**: Tailwind CSS
-- **Vector Database**: Vectorize.io (for startup guide retrieval)
-- **Deployment**: Vercel-ready
+### Prerequisites
 
-## Prerequisites
+- Node.js 18+ 
+- OpenAI API key
+- Vectorize.io account (for startup guide retrieval)
 
-1. **Node.js**: Version 18 or higher
-2. **OpenAI API Key**: [Get one here](https://platform.openai.com/api-keys)
-3. **Vectorize.io Account**: [Sign up here](https://vectorize.io) (for startup guide retrieval)
+### Installation
 
-## Installation
+1. **Clone and install dependencies**
+   ```bash
+   git clone <your-repo-url>
+   cd agent-next-typescript
+   npm install
+   ```
 
-1. Clone the repository:
-```bash
-git clone <repository-url>
-cd agent-next-typescript
-```
+2. **Set up environment variables**
+   ```bash
+   cp .env.example .env.local
+   ```
+   
+   Add your API keys to `.env.local`:
+   ```env
+   OPENAI_API_KEY=your_openai_api_key_here
+   VECTORIZE_API_KEY=your_vectorize_api_key_here
+   VECTORIZE_INDEX_NAME=your_index_name_here
+   ```
 
-2. Install dependencies:
-```bash
-npm install
-# or
-pnpm install
-```
+3. **Start the development server**
+   ```bash
+   npm run dev
+   ```
 
-3. Set up environment variables:
-```bash
-cp .env.example .env.local
-```
+4. **Open your browser**
+   Navigate to [http://localhost:3000](http://localhost:3000)
 
-4. Configure your environment variables in `.env.local`:
-```env
-OPENAI_API_KEY=your_openai_api_key_here
-VECTORIZE_API_KEY=your_vectorize_api_key_here
-VECTORIZE_INDEX_NAME=your_index_name_here
-```
+## 🎯 How It Works
 
-# Vectorize.io Configuration (for startup guide retrieval)
+1. **Share Your Idea**: Tell the assistant about your startup concept
+2. **Interactive Discussion**: Answer strategic questions about your business
+3. **Get Analysis**: Receive feedback based on startup best practices
+4. **Generate Deck**: Create a professional 11-slide pitch deck
 
-1. **Create Account**: Sign up at [vectorize.io](https://vectorize.io)
-2. **Create Index**: 
-   - Go to your dashboard
-   - Click "Create Index"
-   - Choose "Text" index type
-   - Give your key a name (e.g., "startup-pitch-deck-assistant")
-3. **Get API Key**:
-   - Go to API Keys section
-   - Create a new API key
-   - Copy the key to your `.env.local` file
-4. **Upload Content**:
-   - Upload the startup seed fundraising guide content
-   - This will be used for RAG-powered insights
+## 📋 Pitch Deck Structure
 
-## Usage
+The assistant generates a complete 11-slide pitch deck:
 
-### 1. Start the Development Server
-
-```bash
-npm run dev
-# or
-pnpm dev
-```
-
-- Visit the main page to learn about the Startup Pitch Deck Assistant
-- Navigate to `/agents-sdk` to start the interactive chat
-
-### 2. Get Startup-Guided Feedback
-
-The assistant analyzes your idea using proven startup fundraising principles and provides specific feedback.
-
-### 3. Generate Pitch Deck
-
-Create a complete 11-slide pitch deck following industry-recommended structure:
-
-1. **Company Name**: Your startup's name
+1. **Company Name**: Your startup's name and tagline
 2. **Problem**: Clear articulation of the pain point
 3. **Solution**: How your product solves the problem
 4. **Market Opportunity**: Target market and size
@@ -100,59 +74,50 @@ Create a complete 11-slide pitch deck following industry-recommended structure:
 10. **Financial Projections**: Revenue and growth forecasts
 11. **Funding Ask**: Amount and use of funds
 
-## Architecture
+## 🛠️ Tech Stack
+
+- **Framework**: Next.js 14 with TypeScript
+- **AI**: OpenAI Agents SDK with GPT-4
+- **Styling**: Tailwind CSS
+- **Vector Database**: Vectorize.io
+- **Deployment**: Vercel-ready
+
+## 📁 Project Structure
 
 ```
 agent-next-typescript/
 ├── app/
-│   ├── agents-sdk/      # Startup assistant API
-│   ├── api/
-│   │   └── agents-sdk/  # Startup assistant API
+│   ├── agents-sdk/      # Main pitch deck assistant UI
+│   ├── api/agents-sdk/  # Assistant API endpoint
+│   ├── layout.tsx       # Root layout
 │   └── page.tsx         # Landing page
-├── components/          # React components
 ├── lib/
-│   ├── retrieval.ts     # RAG service for startup guide
+│   ├── retrieval.ts     # RAG service for startup guides
+│   ├── vectorize.ts     # Vectorize.io integration
 │   └── utils.ts         # Utility functions
-├── types/               # TypeScript type definitions
+├── types/
+│   ├── pitch-deck.ts    # Pitch deck type definitions
+│   └── vectorize.ts     # Vectorize API types
 └── public/              # Static assets
 ```
 
-## Key Components
-
-- **Agent System**: OpenAI Agents SDK for intelligent conversation
-- **RAG System**: Retrieves relevant insights from startup fundraising guides
-- **Pitch Deck Generator**: Creates structured 11-slide presentations
-- **Analysis Engine**: Evaluates startup ideas against proven principles
-
-## API Endpoints
+## 🔧 API Endpoints
 
 - `POST /api/agents-sdk`: Main chat endpoint for the startup assistant
 
-## Development
+## 🚀 Deployment
 
-### Adding New Tools
+This project is ready to deploy on Vercel:
 
-1. Define the tool in `app/api/agents-sdk/route.ts`
-2. Add appropriate TypeScript types
-3. Update the agent instructions if needed
+1. Push your code to GitHub
+2. Connect your repository to Vercel
+3. Add your environment variables in Vercel dashboard
+4. Deploy!
 
-### Customizing the Pitch Deck Format
-
-Modify the `generatePitchDeckSlides` function in the API route to change the slide structure.
-
-## Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Submit a pull request
-
-## License
+## 📝 License
 
 MIT License
 
-## Resources
+## 🤝 Contributing
 
-- [OpenAI Agents SDK Documentation](https://sdk.openai.com/docs/agents)
-- [Next.js Documentation](https://nextjs.org/docs)
-- [Startup Fundraising Guide](https://www.ycombinator.com/library/4A-a-guide-to-seed-fundraising)
+This is a homework project for my instructor. Feel free to fork and modify for your own use!

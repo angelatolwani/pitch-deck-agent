@@ -1,7 +1,8 @@
 {
-  "name": "rag-next-typescript",
-  "version": "0.1.0",
+  "name": "startup-pitch-deck-assistant",
+  "version": "1.0.0",
   "private": true,
+  "description": "AI-powered startup pitch deck assistant using OpenAI Agents SDK",
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
